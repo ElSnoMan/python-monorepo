@@ -1,0 +1,13 @@
+tasks:
+  # - name: Pod setup
+  #   command: |
+  #     # TODO: This may not be needed
+  #     # Install to bypass environment errors when installing packages from git
+  #     sudo apt-get install qtbase5-dev
+
+  - name: Setup Python
+    command: |
+      pip install poetry
+      python -m venv "venv"
+      source venv/bin/activate
+      poetry install
